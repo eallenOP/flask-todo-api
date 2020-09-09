@@ -18,6 +18,11 @@ tasks = [
     }
 ]
 
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>To-do test api</h1>'''
+
+
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
     return jsonify({'tasks': tasks})
